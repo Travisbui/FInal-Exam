@@ -7,6 +7,7 @@
 size = Vector2(291, 278)
 
 [node name="Player" type="Area2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_o58wu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -15,3 +16,6 @@ shape = SubResource("RectangleShape2D_ilekj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_w1mn2")
+flip_h = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
